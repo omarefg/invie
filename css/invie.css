@@ -113,7 +113,7 @@ input:focus,textarea:focus{
   margin-left: 0;
 }
 .Contenedor{
-  width: 800px;
+  max-width: 800px;
   margin: auto;
   position: relative;
 }
@@ -155,7 +155,7 @@ input:focus,textarea:focus{
 }
 .formulario{
   display: flex;
-  width: 400px;
+  width: 300px;
   color: white;
 }
 .col1, .col2{
@@ -164,7 +164,9 @@ input:focus,textarea:focus{
 }
 .col1{
   margin-right: 15px;
-
+}
+.col2{
+  margin-right: 8px;
 }
 .intereses label{
   font-size: 12px;
@@ -183,4 +185,223 @@ input:focus,textarea:focus{
   content: '⨳';
   font-size: 20px;
   color: white;
+}
+textarea{
+  width: 100%;
+  resize: none;
+}
+.burguer-button{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  /*background-color: #395667;*/
+  color: white;
+  display: none;
+  text-align: center;
+  position: absolute;
+  left: 10;
+  top: 18px;
+  cursor: pointer;
+  z-index: 3;
+}
+.video-responsive-src{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-responsive-contenedor{
+  position: relative;
+  padding-top: 56.4%;
+}
+/*Query de Ipad*/
+
+@media screen and (max-width: 800px){
+        /*Título*/
+  .Titulo{
+    font-size: 45px;
+    margin-top: 30px;
+  }
+  .title-a{
+    font-size: 18px;
+  }
+  .Portada{
+    height: auto;
+  }
+  .Portada .button{
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+          /*Título*/
+
+          /*Guitarras*/
+  .Guitarra{
+    height: auto;
+  }
+  .Guitarras{
+    text-align: center;
+  }
+  .Right img, .Left img{
+    float: none;
+    position: static;
+  }
+  .title-b{
+    margin: 0;
+  }
+  .Guitarras li{
+    list-style: none;
+  }
+  .ContenedorGuitarra-B{
+    margin:0;
+    position: static;
+  }
+  .ContenedorGuitarra-A{
+    padding: 0;
+  }
+          /*Guitarras*/
+}
+
+@media screen and (max-width: 767px) {
+  /*Footer*/
+  .footer .Contenedor{
+    display: block;
+  }
+  .footer{
+    padding: 20px;
+  }
+  .formulario{
+    display: block;
+    margin: 0 auto;
+  }
+  .contacto{
+    margin: 0 auto;
+
+  }
+  .intereses{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .intereses label{
+    margin: 0;
+    font-size: 16px;
+    zoom: 1.5;
+  }
+  input[type="text"],input[type="email"]{
+    font-size: 16px;
+    padding: 5px;
+  }
+  .button{
+    margin-bottom: 20px;
+  }
+  .usuario label{
+    zoom: 1.5;
+  }
+
+}
+
+/*Query de Smartphone*/
+@media screen and (max-width: 650px){
+  .Menu{
+    position: static;
+    display: block;
+  }
+  .Header{
+    text-align: center;
+  }
+  .Logotipo{
+    margin: auto;
+  }
+  .Menu ul{
+    padding: 0;
+  }
+  .Menu li:first-child{
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /*PORTADA*/
+  .burguer-button{
+    display: inline-block;
+  }
+
+  .Contenedor{
+    position: static;
+  }
+
+  .Header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .Portada{
+    text-align: center;
+
+  }
+  .Logotipo{
+    margin: auto;
+  }
+  .Menu{
+    background-color: rgba(255, 60, 88, 0.8);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: .3s;
+  }
+
+  .Menu.active{
+    left: 0;
+  }
+
+  .Menu ul{
+    padding: 0;
+    margin-bottom: 0;
+    flex: 1;
+  }
+  .Menu li{
+    margin-left: 0;
+    display: inherit;
+    border-top: 1px solid white;
+    padding: 8px 0;
+  }
+  .Menu li:before{
+    content: none;
+  }
+  .Menu li:last-child{
+    border-bottom: 1px solid white;
+  }
+  .Titulo{
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .title-a{
+    font-size: 16px;
+  }
+  /*GUITARRAS*/
+  .Guitarras img{
+    width: 200px;
+    height: auto;
+  }
+  .title-c{
+    font-size: 30px;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+  body{
+    border: 10px solid red;
+  }
 }
