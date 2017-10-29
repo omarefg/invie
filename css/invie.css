@@ -28,6 +28,7 @@ input:focus,textarea:focus{
 .background{
   background-image: url("../images/background.png");
   background-size: cover;
+  background-color: #466173;
 }
 .Titulo{
   font-size: 70px;
